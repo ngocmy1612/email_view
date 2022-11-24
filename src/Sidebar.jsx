@@ -24,6 +24,16 @@ import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import CropOutlinedIcon from '@mui/icons-material/CropOutlined';
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import KeyboardCommandKeyIcon from '@mui/icons-material/KeyboardCommandKey';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import ActiveLastBreadcrumb from './component/Breadcrumbs';
+import DeskButton from './component/DeskButton';
+import BasicGrid from './component/GridBody';
 
 const drawerWidth = 240;
 
@@ -111,24 +121,38 @@ export default function MiniDrawer() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{backgroundColor: 'unset'}}>
-        <Toolbar>
+      {/* <AppBar position="fixed" open={open} sx={{backgroundColor: '#F1F3F7'}}> */}
+      <AppBar position="fixed" open={open} sx={{backgroundColor: '#F1F3F7'}}>
+        <Toolbar className='toolbar'>
+        <div className='header-left'>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MenuIcon className='menu-icon'/>
-          </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{color:'black'}}>
-            Customer Name
-          </Typography>
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{
+                marginRight: 5,
+                ...(open && { display: 'none' }),
+              }}
+            >
+              <MenuIcon className='menu-icon'/>
+            </IconButton>
+            <Typography variant="h6" noWrap component="div" sx={{color:'black'}}>
+              Customer Name 
+            </Typography>
+            <AddCircleOutlinedIcon className='title-icon'/>
+        </div>
+          
+          <div className='header-right'>
+              <SearchOutlinedIcon className='header-icon'/>
+              <NotificationsNoneOutlinedIcon className='header-icon' />
+              <SettingsOutlinedIcon className='header-icon' />
+              <HelpOutlineOutlinedIcon className='header-icon' />
+              <AccountCircleOutlinedIcon className='header-icon' />
+              <LogoutOutlinedIcon className='header-icon' />
+          </div>
         </Toolbar>
+
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader className='sidebar-top'>
@@ -174,36 +198,16 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-          imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-          Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-          Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-          nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-          leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-          feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-          consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-          sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-          eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-          neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-          tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-          sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-          tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-          gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-          et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-          tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
-      </Box> */}
+        <Box>
+          <ActiveLastBreadcrumb />
+        </Box>
+        <Box>
+          <DeskButton/>
+        </Box>
+        <BasicGrid />
+      </Box>
     </Box>
   );
 }
