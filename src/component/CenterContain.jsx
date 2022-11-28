@@ -4,10 +4,11 @@ import TabList from '@mui/joy/TabList';
 import Tab, { tabClasses } from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
 import Typography from '@mui/joy/Typography';
-import { Box, styled } from '@mui/material';
+import { Box, Link, Select} from '@mui/material';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import CustomizedTimeline from './Timeline';
 import '../style.css'
+import MoreTab from './MoreTab';
 
 export default function TabsPricingExample() {
   return (
@@ -48,7 +49,9 @@ export default function TabsPricingExample() {
       >
         <Tab sx={{ py: 1.5 }}>Content</Tab>
         <Tab>Timeline</Tab>
-        <Tab>More</Tab>
+        <Tab>
+          
+        </Tab>
       </TabList>
       <TabPanel value={0}>
         <div className='task-stage'>
@@ -103,30 +106,10 @@ export default function TabsPricingExample() {
         <CustomizedTimeline />
       </TabPanel>
       <TabPanel value={2}>
-        <Typography level="inherit" mt={2}>
-          The most advanced features for data-rich applications, as well as the
-          highest priority for support.
-        </Typography>
-        <Typography textColor="primary.400" fontSize="xl3" fontWeight="xl" my={1}>
-          <Typography
-            fontSize="xl"
-            borderRadius="sm"
-            px={0.5}
-            mr={0.5}
-            sx={(theme) => ({
-              ...theme.variants.soft.danger,
-              color: 'danger.400',
-              verticalAlign: 'text-top',
-              textDecoration: 'line-through',
-            })}
-          >
-            $49
-          </Typography>
-          $37*{' '}
-          <Typography fontSize="sm" textColor="text.secondary" fontWeight="md">
-            / dev / month
-          </Typography>
-        </Typography>
+        test 1
+      </TabPanel>
+      <TabPanel value={3}>
+        test 2
       </TabPanel>
     </Tabs>
   );

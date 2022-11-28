@@ -34,6 +34,7 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import ActiveLastBreadcrumb from './component/Breadcrumbs';
 import DeskButton from './component/DeskButton';
 import BasicGrid from './component/GridBody';
+import Badge from '@mui/material/Badge';
 
 const drawerWidth = 240;
 
@@ -145,7 +146,9 @@ export default function MiniDrawer() {
           
           <div className='header-right'>
               <SearchOutlinedIcon className='header-icon'/>
-              <NotificationsNoneOutlinedIcon className='header-icon' />
+              <Badge badgeContent={4} color="error" className='header-icon'>
+                <NotificationsNoneOutlinedIcon color="action" />
+              </Badge>
               <SettingsOutlinedIcon className='header-icon' />
               <HelpOutlineOutlinedIcon className='header-icon' />
               <AccountCircleOutlinedIcon className='header-icon' />

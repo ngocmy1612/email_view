@@ -8,6 +8,10 @@
 .list-item {
     color: gray;
 }
+.header-right {
+    display: flex;
+    align-items: flex-end;
+}
 
 .list-item:first-of-type {
     color: white;

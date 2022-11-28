@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import LeftContain from './LeftContain';
 import CenterContain from './CenterContain';
 import RightContain from './RightContain';
+import LabTabs from './MoreTab';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -29,7 +30,8 @@ export default function BasicGrid() {
         </Grid>
         <Grid item xs={6}>
           <Item>
-            <CenterContain />
+            {/* <CenterContain /> */}
+            <LabTabs />
           </Item>
         </Grid>
         <Grid item xs={3}>

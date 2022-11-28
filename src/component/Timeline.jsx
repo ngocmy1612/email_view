@@ -42,7 +42,6 @@ export default function CustomizedTimeline() {
       
       <TimelineItem>
         <TimelineSeparator>
-        <TimelineConnector />
           <TimelineDot color="primary">
             <RateReviewIcon />
           </TimelineDot>
@@ -60,7 +59,6 @@ export default function CustomizedTimeline() {
 
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineConnector />
           <TimelineDot color="primary">
             <ChatBubbleOutlineIcon />
           </TimelineDot>
@@ -78,7 +76,6 @@ export default function CustomizedTimeline() {
       
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineConnector />
           <TimelineDot color="primary">
             <AttachFileIcon />
           </TimelineDot>
